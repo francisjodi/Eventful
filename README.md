@@ -1,2 +1,2 @@
 # Eventful
-an event portal for college organizations/clubs so students know what's going on 
+An event portal for college organizations/clubs so students know what's going on at their schools.
