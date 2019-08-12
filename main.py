@@ -27,12 +27,13 @@ def createEvent(name,location,org,category,college,date):
 
 class SigninHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/signin.html')
+        template = jinja_env.get_template('/templates/signin.html')
         self.response.write(template.render())
     def post(self):
         filter = self.request.get('filter')
-        template = jinja_env.get_template('templates/signin.html')
-        self.response.write(template.render({'response': response}))
+        template = jinja_env.get_template('/templates/signin.html')
+        self.response.write(template.render({'response':'string'}))
+
 
 class EventPageHandler(webapp2.RequestHandler):
     def get(self):
@@ -50,23 +51,29 @@ class EventPageHandler(webapp2.RequestHandler):
 
 class CalendarHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/calendar.html')
+        template = jinja_env.get_template('/templates/calendar.html')
         self.response.write(template.render())
 
 class SearchHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/home.html')
+        template = jinja_env.get_template('/templates/home.html')
         self.response.write(template.render())
     def post(self):
         filter = self.request.get('filter')
-        template = jinja_env.get_template('templates/home.html')
+        template = jinja_env.get_template('/templates/home.html')
         #self.response.write(template.render({ 'response': response }))
 
-
+class EventPageHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('/templates/eventpage.html')
+        self.response.write(template.render())
 class AddEventHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('/templates/addevent.html')
+        self.response.write(template.render())
     def post(self):
         filter = self.request.get('filter')
-        template = jinja_env.get_template('templates/addevent.html')
+        template = jinja_env.get_template('/templates/addevent.html')
         #self.response.write(template.render({ 'response': response }))
 
 class LoadDataHandler(webapp2.RequestHandler):
