@@ -11,6 +11,9 @@ jinja_env = jinja2.Environment(
     autoescape=True)
 
 class SigninHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/signin.html')
+        self.response.write(template.render())
     def post(self):
         filter = self.request.get('filter')
         template = jinja_env.get_template('templates/signin.html')
