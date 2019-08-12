@@ -24,19 +24,19 @@ class SearchHandler(webapp2.RequestHandler):
     def post(self):
         filter = self.request.get('filter')
         template = jinja_env.get_template('templates/home.html')
-        self.response.write(template.render({ 'response': response }))
+        #self.response.write(template.render({ 'response': response }))
 
 class SigninHandler(webapp2.RequestHandler):
     def post(self):
         filter = self.request.get('filter')
         template = jinja_env.get_template('templates/signin.html')
-        self.response.write(template.render({ 'response': response }))
+        #self.response.write(template.render({ 'response': response }))
 
 class AddEventHandler(webapp2.RequestHandler):
     def post(self):
         filter = self.request.get('filter')
         template = jinja_env.get_template('templates/addevent.html')
-        self.response.write(template.render({ 'response': response }))
+        #self.response.write(template.render({ 'response': response }))
 
 
 app = webapp2.WSGIApplication([
