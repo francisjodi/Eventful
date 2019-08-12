@@ -19,10 +19,7 @@ class SigninHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/signin.html')
         self.response.write(template.render({'response': response}))
 
-class EventPageHandler(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_env.get_template('templates/eventpage.html')
-        self.response.write(template.render())
+
 
 class CalendarHandler(webapp2.RequestHandler):
     def get(self):
@@ -38,8 +35,14 @@ class SearchHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/home.html')
         #self.response.write(template.render({ 'response': response }))
 
-
+class EventPageHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/eventpage.html')
+        self.response.write(template.render())
 class AddEventHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/addevent.html')
+        self.response.write(template.render())
     def post(self):
         filter = self.request.get('filter')
         template = jinja_env.get_template('templates/addevent.html')
