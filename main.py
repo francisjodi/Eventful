@@ -10,6 +10,12 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+class SigninHandler(webapp2.RequestHandler):
+    def post(self):
+        filter = self.request.get('filter')
+        template = jinja_env.get_template('templates/signin.html')
+        self.response.write(template.render({'response': response}))
+
 class EventPageHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/eventpage.html')
@@ -26,11 +32,7 @@ class SearchHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/home.html')
         self.response.write(template.render({ 'response': response }))
 
-class SigninHandler(webapp2.RequestHandler):
-    def post(self):
-        filter = self.request.get('filter')
-        template = jinja_env.get_template('templates/signin.html')
-        self.response.write(template.render({ 'response': response }))
+
 
 class AddEventHandler(webapp2.RequestHandler):
     def post(self):
