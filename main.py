@@ -12,44 +12,37 @@ jinja_env = jinja2.Environment(
 
 class EventPageHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/main.html')
+        template = jinja_env.get_template('templates/eventpage.html')
         self.response.write(template.render())
 
 class CalendarHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/main.html')
+        template = jinja_env.get_template('templates/calendar.html')
         self.response.write(template.render())
 
 class SearchHandler(webapp2.RequestHandler):
     def post(self):
         filter = self.request.get('filter')
-        base_url = 'https://ghibliapi.herokuapp.com/{}'.format(filter)
-        response = json.loads(urlfetch.fetch(base_url).content)
-        template = jinja_env.get_template('templates/results.html')
+        template = jinja_env.get_template('templates/home.html')
         self.response.write(template.render({ 'response': response }))
 
-        # params = {
-        #     'q': self.request.get('query'),
-        #     'i': self.request.get('ingredients')}
-        # response = json.loads(urlfetch.fetch(base_url + urlencode(params)).content)
 class SigninHandler(webapp2.RequestHandler):
     def post(self):
         filter = self.request.get('filter')
-        base_url = 'https://ghibliapi.herokuapp.com/{}'.format(filter)
-        response = json.loads(urlfetch.fetch(base_url).content)
-        template = jinja_env.get_template('templates/results.html')
+        template = jinja_env.get_template('templates/signin.html')
         self.response.write(template.render({ 'response': response }))
 
 class AddEventHandler(webapp2.RequestHandler):
     def post(self):
         filter = self.request.get('filter')
-        base_url = 'https://ghibliapi.herokuapp.com/{}'.format(filter)
-        response = json.loads(urlfetch.fetch(base_url).content)
-        template = jinja_env.get_template('templates/results.html')
+        template = jinja_env.get_template('templates/addevent.html')
         self.response.write(template.render({ 'response': response }))
 
 
 app = webapp2.WSGIApplication([
-    ('/', MainPageHandler),
+    ('/', SigninHandler),
     ('/search', SearchHandler),
+    ('/calendar', CalendarHandler),
+    ('/addevent', AddEventHandler),
+    ('/events', EventPageHandler),
 ], debug=True)
