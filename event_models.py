@@ -1,5 +1,8 @@
 from google.appengine.ext import ndb
 
+class Category(ndb.Model):
+    category_name = ndb.StringProperty(required=True);
+
 class Event(ndb.Model):
     event_name =  ndb.StringProperty(required=True)
     location =  ndb.StringProperty(required=True)
