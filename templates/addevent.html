@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <title>ADDEVENT</title>
 </head>
-<body>
-    {%include "/templates/nav.html"%}
-    <p>SCHOOL<input name = "query"></p>
-    <p>CLUB/ORG<input name = "query"></p>
-    <p>CATEGORY<input name = "query"></p>
-    <p>EVENT TITLE<input name = "query"></p>
-    <p>DATE/TIME<input name = "query"></p>
-    <p>ADD INFO<input name = "query"></p>
-    <p><input type = "submit" value = "Add"></p>
-    
-</body>
+
 </html>
+    {%include "/templates/nav.html"%}
+    <form method="post" action="/addevent">
+        <div>COLLEGE</div>
+        <div><select name="college_name">
+        <option>Loyola Marymount University</option>
+        <option>University of California Los Angeles</option>
+        <option>Pepperdine University</option>
+        <option>University of Southern California</option>
+    </select></div>
+    <div>CLUB/ORG<input name = "organization_name"></div>
+    <div>CATEGORY<select name = "category">
+      <option>Athletics</option>
+      <option>Arts</option>
+      <option>Academics</option>
+      <option>Religion</option>
+      <option>Service</option>
+      <option>Greek Life</option>
+      <option>Culture</option>
+      <option>Volunteer</option>
+      <option>Housing</option>
+      <option>Other</option>
+    </select></div>
+    <div>EVENT TITLE<input name = "event_name"></div>
+    <div>DATE/TIME<input type="text" id="myInput" onkeyup="myFunction()" placeholder="year, mm, dd, hr, min"></div>
+    <div>ADDITIONAL INFO<input name = "additional_info"></div>
+    <p><input type = "submit" value = "Add"></p>
+
+  </form>
+    
