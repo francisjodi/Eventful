@@ -4,6 +4,7 @@ import webapp2
 import jinja2
 from urllib import urlencode
 from google.appengine.api import urlfetch
+from google.appengine.api import users
 from event_models import Event
 from seed_events import seed_data
 import datetime
@@ -27,8 +28,19 @@ def createEvent(name,location,org,category,college,date):
 
 class SigninHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
         template = jinja_env.get_template('/templates/signin.html')
-        self.response.write(template.render())
+        if user:
+            logout_url = users.create_logout_url('/')
+            self.response.write(template.render({
+                "loginURL":logout_url
+            }))
+        else:
+            login_URL = users.create_login_url('/')
+            self.response.write(template.render({
+                "loginURL":login_URL
+            }))
+
     def post(self):
         filter = self.request.get('filter')
         template = jinja_env.get_template('/templates/signin.html')
@@ -78,14 +90,16 @@ class AddEventHandler(webapp2.RequestHandler):
         college_name = self.request.get('college_name')
         category = self.request.get('category')
         location = self.request.get('location')
-        #date_and_time = self.request.get('date_and_time')
-
+        date_and_time = map( int, self.request.get('date').split("-"))
+        year= date_and_time[0]
+        month= date_and_time[1]
+        day = date_and_time[2]
         event_key = Event(event_name=event_name,
                     organization_name=organization_name,
                     college_name=college_name,
                     category=category,
                     location=location,
-                    #date_and_time=datetime.datetime(date_and_time)
+                    date_and_time=datetime.date(year,month,day)
                     ).put()
 
         self.response.write("Your event: {} has been added, thank you.".format(event_name))
