@@ -42,6 +42,14 @@ def seed_data():
               date_and_time=datetime.date(2019, 9, 3),
               time=datetime.time(13,30,0,0))
     event_5.put()
+    event_6 = Event(event_name="Volleyball Game",
+              location="Gym",
+              organization_name="Men's Volleyball Team",
+              category="Athletics",
+              college_name="University of California Los Angeles",
+              date_and_time=datetime.date(2019, 9, 7),
+              time=datetime.time(18,30,0,0))
+    event_6.put()
     category_athletics = Category(category_name="Athletics")
     category_athletics.put()
     category_arts = Category(category_name="Arts")
