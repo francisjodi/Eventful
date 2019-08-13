@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="styles/signin.css">
 
   </head>
-  <body>
-    
-    <p class = "signin_center">EVENTFUL</p>
-
+  <body >
+    {%include "/templates/particles.html"%}
+    <div  class = "signin_center">
+    <p>EVENTFUL</p>
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" style="display: none;">Authorize</button>
     <button id="signout_button" style="display: none;">Sign Out</button>
-
     <pre id="content" style="white-space: pre-wrap;"></pre>
+    </div>
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
@@ -140,6 +140,5 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-    {%include "/templates/particles.html"%}
   </body>
 </html>
