@@ -8,7 +8,7 @@
   {%include "/templates/nav.html"%}
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search clubs">
 
-  <ul id="myUL">
+  <ul id="categorylist">
     <li><a href="#">Athletics </a></li>
     <li><a href="#">Arts</a></li>
     <li><a href="#"> Academics</a></li>
@@ -45,5 +45,17 @@
    style="display: none;" class="cta gmail-show">Save the date</a>
 </div>
 
+
+<div>
+  <ul>
+    {% for event in events %}
+    <li>
+      {{event}}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script src="/scripts/eventful.js"></script>
 </body>
 </html>
