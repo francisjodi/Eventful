@@ -124,7 +124,7 @@ class AddEventHandler(webapp2.RequestHandler):
         #     category.events.append(event_key)
         # category.put()
 
-        self.response.write("Your event: {} has been added, thank you. {}".format(event_name, hour))
+        self.response.write("Your event: {} has been added, thank you.".format(event_name))
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
