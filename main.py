@@ -105,23 +105,26 @@ class AddEventHandler(webapp2.RequestHandler):
         year= date_and_time[0]
         month= date_and_time[1]
         day = date_and_time[2]
+        time = map( int, self.request.get('time').split(":"))
+        hour = time[0]
+        minute = time[1]
         event_key = Event(event_name=event_name,
                     organization_name=organization_name,
                     college_name=college_name,
                     category=category,
                     location=location,
-                    date_and_time=datetime.date(year,month,day)
+                    date_and_time=datetime.date(year,month,day),
+                    time=datetime.time(hour, minute, 0, 0),
                     ).put()
 
-        category = Category.query().filter(Category.category_name==category).get()
-        if not category.events:
-            category.events = []
-        else:
-            category.events.append(event_key)
-        category.put()
+        # category = Category.query().filter(Category.category_name==category).get()
+        # if not category.events:
+        #     category.events = []
+        # else:
+        #     category.events.append(event_key)
+        # category.put()
 
-
-        self.response.write("Your event: {} has been added, thank you.".format(event_name))
+        self.response.write("Your event: {} has been added, thank you. {}".format(event_name, hour))
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):

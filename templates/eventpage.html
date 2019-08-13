@@ -44,7 +44,10 @@
   <ul>
     {% for event in events %}
     <li>
-      {{event}}
+      {{event.event_name}} on {{event.date_and_time}}
+      <br>location: {{event.location}}
+      <br>put on by: {{event.organization_name}}
+      <br>time: {{event.time}}
     </li>
     {% endfor %}
   </ul>
