@@ -9,6 +9,8 @@ from event_models import Event, Category
 from seed_events import seed_data
 import datetime
 
+SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
@@ -59,7 +61,7 @@ class EventPageHandler(webapp2.RequestHandler):
         # self.response.write("{} is the date and time".format(event.date_and_time))
         template = jinja_env.get_template('templates/eventpage.html')
         self.response.write(event)
-        self.response.write(template.render())
+
 
 class CategoryHandler(webapp2.RequestHandler):
     def get(self):
