@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>EVENTS</title>
+    <link rel="stylesheet" href="/styles/eventpage.css">
 </head>
 <body>
   {%include "/templates/nav.html"%}
+  <div class="wrapper">
+    <div class="one">
+      <h2> CATEGORIES </h2>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search clubs">
 
+    <ul id="categorylist">
+      <li><a href="#">Athletics </a></li>
+      <li><a href="#">Arts</a></li>
+      <li><a href="#"> Academics</a></li>
+      <li><a href="#">Service </a></li>
+      <li><a href="#">Religion</a></li>
+      <li><a href="#"> Culture</a></li>
+      <li><a href="#">Greek Life</a></li>
+      <li><a href="#"> Volunteer</a></li>
+      <li><a href="#">Housing</a></li>
+      <li><a href="#">Other</a></li>
+  </ul>
+  </div>
+
+  <div class="two">
+  {% for event in event_block %}
+      <h2>{{event.name}} | {{event. name}}s</h2>
+  {% endfor %}
+  </div>
+
+  <script>
+  function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+  </script>
+
+<div class="foo">
+      <h2>EVENTS</h2>
+  <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
+  <a href="http://localhost:8080/events"
+   style="display: none;" class="cta gmail-show">Save the date</a>
+</div>
+
+
+<div>
+  <ul>
+    {% for event in events %}
+    <li>
+      {{event.event_name}} on {{event.date_and_time}}
+      <br>location: {{event.location}}
+      <br>put on by: {{event.organization_name}}
+      <br>time: {{event.time}}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script src="/scripts/eventful.js"></script>
+
+<footer> links </footer>
+</div>
 </body>
 </html>
