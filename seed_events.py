@@ -7,5 +7,5 @@ def seed_data():
               organization_name="Basketball Team",
               category="Athletics",
               college_name="Loyola Marymount University",
-              date_and_time=datetime.datetime(2019, 9, 10, 15, 30, 0, 0))
+              date_and_time=datetime.date(2019, 9, 10))
     event_1.put()

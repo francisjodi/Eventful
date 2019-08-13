@@ -77,14 +77,16 @@ class AddEventHandler(webapp2.RequestHandler):
         college_name = self.request.get('college_name')
         category = self.request.get('category')
         location = self.request.get('location')
-        #date_and_time = self.request.get('date_and_time')
-
+        date_and_time = map( int, self.request.get('date').split("-"))
+        year= date_and_time[0]
+        month= date_and_time[1]
+        day = date_and_time[2]
         event_key = Event(event_name=event_name,
                     organization_name=organization_name,
                     college_name=college_name,
                     category=category,
                     location=location,
-                    #date_and_time=datetime.datetime(date_and_time)
+                    date_and_time=datetime.date(year,month,day)
                     ).put()
 
         self.response.write("Your event: {} has been added, thank you.".format(event_name))
