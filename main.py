@@ -4,6 +4,7 @@ import webapp2
 import jinja2
 from urllib import urlencode
 from google.appengine.api import urlfetch
+from google.appengine.api import users
 from event_models import Event
 from seed_events import seed_data
 import datetime
@@ -27,8 +28,19 @@ def createEvent(name,location,org,category,college,date):
 
 class SigninHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
         template = jinja_env.get_template('/templates/signin.html')
-        self.response.write(template.render())
+        if user:
+            logout_url = users.create_logout_url('/')
+            self.response.write(template.render({
+                "loginURL":logout_url
+            }))
+        else:
+            login_URL = users.create_login_url('/')
+            self.response.write(template.render({
+                "loginURL":login_URL
+            }))
+
     def post(self):
         filter = self.request.get('filter')
         template = jinja_env.get_template('/templates/signin.html')
@@ -67,6 +79,7 @@ class EventPageHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('/templates/eventpage.html')
         self.response.write(template.render())
+        
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('/templates/addevent.html')
