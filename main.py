@@ -5,7 +5,7 @@ import jinja2
 from urllib import urlencode
 from google.appengine.api import urlfetch
 from google.appengine.api import users
-from event_models import Event
+from event_models import Event, Category
 from seed_events import seed_data
 import datetime
 from googleapiclient.discovery import build
@@ -59,12 +59,18 @@ class EventPageHandler(webapp2.RequestHandler):
              "basketball team",
              "Athletics",
              "Loyola Marymount University",
-             datetime.datetime(2019, 9, 10, 15, 30, 0, 0))
+             datetime.date(2019, 9, 10))
         event = Event.query().filter(Event.event_name=="basketball game").get()
         # self.response.write("{} is the date and time".format(event.date_and_time))
         template = jinja_env.get_template('templates/eventpage.html')
         self.response.write(event)
 
+
+class CategoryHandler(webapp2.RequestHandler):
+    def get(self):
+        categories = Category.query().order(Category.category_name).fetch()
+        start_template = jinja_env.get_template("templates/eventpage.html")
+        self.response.write(start_template.render({'category_info' : categories}))
 
 class CalendarHandler(webapp2.RequestHandler):
     def get(self):
@@ -117,9 +123,14 @@ class SearchHandler(webapp2.RequestHandler):
 
 class EventPageHandler(webapp2.RequestHandler):
     def get(self):
+        category = self.request.get("category")
+        if category:
+            events = Event.query().filter(Event.category==category).fetch()
+        else:
+            events = Event.query().fetch()
         template = jinja_env.get_template('/templates/eventpage.html')
-        self.response.write(template.render())
-        
+        self.response.write(template.render({'events' : events}))
+
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('/templates/addevent.html')
@@ -142,11 +153,23 @@ class AddEventHandler(webapp2.RequestHandler):
                     date_and_time=datetime.date(year,month,day)
                     ).put()
 
+<<<<<<< HEAD
         event_block = Event.query().order(Event.category).fetch()
         self.response.write(template.render({'event_block' : event_block}))
 
 
 
+=======
+        category = Category.query().filter(Category.category_name==category).get()
+        if not category.events:
+            category.events = []
+        else:
+            category.events.append(event_key)
+        category.put()
+
+
+        self.response.write("Your event: {} has been added, thank you.".format(event_name))
+>>>>>>> cbc0a0dce5df8b69185b23a8ffd14159d058f80d
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
@@ -161,4 +184,5 @@ app = webapp2.WSGIApplication([
     ('/addevent', AddEventHandler),
     ('/events', EventPageHandler),
     ('/seed-data', LoadDataHandler),
+    ('/categories', CategoryHandler),
 ], debug=True)
