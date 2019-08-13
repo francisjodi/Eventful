@@ -67,6 +67,7 @@ class EventPageHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('/templates/eventpage.html')
         self.response.write(template.render())
+        
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('/templates/addevent.html')
