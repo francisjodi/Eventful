@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <title>ADDEVENT</title>
 </head>
-
-</html>
+<body>
     {%include "/templates/nav.html"%}
-    <form method="post" action="/addevent">
-        <div>COLLEGE</div>
-        <div><select name="college_name">
-        <option>Loyola Marymount University</option>
-        <option>University of California Los Angeles</option>
-        <option>Pepperdine University</option>
-        <option>University of Southern California</option>
+  <form method="post" action="/addevent">
+    <div>COLLEGE</div>
+    <div><select name="college_name">
+      <option>Loyola Marymount University</option>
+      <option>University of California Los Angeles</option>
+      <option>Pepperdine University</option>
+      <option>University of Southern California</option>
     </select></div>
     <div>CLUB/ORG<input name = "organization_name"></div>
     <div>CATEGORY<select name = "category">
@@ -29,7 +28,8 @@
       <option>Other</option>
     </select></div>
     <div>EVENT TITLE<input name = "event_name"></div>
-    <div>DATE/TIME<input type="text" id="myInput" onkeyup="myFunction()" placeholder="year, mm, dd, hr, min"></div>
+    <div>LOCATION<input name = "location"></div>
+    <div>DATE/TIME<input type="text" name="date_and_time" onkeyup="myFunction()" placeholder="year, mm, dd, hr, min"></div>
     <div>ADDITIONAL INFO<input name = "additional_info"></div>
     <p><input type = "submit" value = "Add"></p>
 

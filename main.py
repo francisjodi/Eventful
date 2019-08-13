@@ -72,9 +72,22 @@ class AddEventHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('/templates/addevent.html')
         self.response.write(template.render())
     def post(self):
-        filter = self.request.get('filter')
-        template = jinja_env.get_template('/templates/addevent.html')
-        #self.response.write(template.render({ 'response': response }))
+        event_name = self.request.get('event_name')
+        organization_name = self.request.get('organization_name')
+        college_name = self.request.get('college_name')
+        category = self.request.get('category')
+        location = self.request.get('location')
+        #date_and_time = self.request.get('date_and_time')
+
+        event_key = Event(event_name=event_name,
+                    organization_name=organization_name,
+                    college_name=college_name,
+                    category=category,
+                    location=location,
+                    #date_and_time=datetime.datetime(date_and_time)
+                    ).put()
+
+        self.response.write("Your event: {} has been added, thank you.".format(event_name))
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
