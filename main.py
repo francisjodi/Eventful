@@ -59,12 +59,13 @@ class EventPageHandler(webapp2.RequestHandler):
         # self.response.write("{} is the date and time".format(event.date_and_time))
         template = jinja_env.get_template('templates/eventpage.html')
         self.response.write(event)
-        self.response.write(template.render())
+
 
 class CalendarHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('/templates/calendar.html')
         self.response.write(template.render())
+        
 
 class SearchHandler(webapp2.RequestHandler):
     def get(self):
@@ -102,7 +103,9 @@ class AddEventHandler(webapp2.RequestHandler):
                     date_and_time=datetime.date(year,month,day)
                     ).put()
 
-        self.response.write("Your event: {} has been added, thank you.".format(event_name))
+        event_block = Event.query().order(Event.category).fetch()
+        self.response.write(template.render({'event_block' : event_block}))
+
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
