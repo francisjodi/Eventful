@@ -121,7 +121,7 @@ class AddEventHandler(webapp2.RequestHandler):
         time = map( int, self.request.get('time').split(":"))
         hour = time[0]
         minute = time[1]
-        addtional_info = self.request.get('additional_info')
+        # addtional_info = self.request.get('additional_info')
         event_key = Event(event_name=event_name,
                 organization_name=organization_name,
                 college_name=college_name,
@@ -129,7 +129,7 @@ class AddEventHandler(webapp2.RequestHandler):
                 location=location,
                 date_and_time=datetime.date(year,month,day),
                 time=datetime.time(hour, minute, 0, 0),
-                additional_info=additional_info
+                # additional_info=additional_info
                 ).put()
 
         # category = Category.query().filter(Category.category_name==category).get()
