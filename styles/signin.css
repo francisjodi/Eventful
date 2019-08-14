@@ -33,11 +33,37 @@
     font-size: 36px;
     letter-spacing: 22px;
     /* margin-left: 10px; */
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 }
 
 
-#sign_in_button {
-    font-family: "arial";
-    font-size: 60px;
+#signout_button {
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
+    background-color: rgb(0,0,0);
+    color: white;
+    border:none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 25px;
+    opacity: 0.7;
+    transition: 0.3s;
 }
+#signout_button:hover {opacity: 1}
+
+#authorize_button {
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
+    background-color: rgb(0,0,0);
+    color: white;
+    border:none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 25px;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+  
+#authorize_button:hover {opacity: 1}
