@@ -7,8 +7,7 @@
     position: relative;
     z-index: 1;
     top: 280px;
-    left: 15%;
-    
+    left: 15%;   
 }
 
 .header { 
@@ -16,7 +15,6 @@
     font-style: italic;
     font-size: 26px;
     letter-spacing: 8px;
-    /* margin-left: 10px; */
     margin-bottom: 20px;
 }
 
@@ -36,4 +34,10 @@
     letter-spacing: 22px;
     /* margin-left: 10px; */
     margin-bottom: 70px;
+}
+
+
+#sign_in_button {
+    font-family: "arial";
+    font-size: 60px;
 }
