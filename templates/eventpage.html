@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>EVENTS</title>
+    <link rel="stylesheet" href="/styles/eventpage.css">
 </head>
 <body>
+  
   {%include "/templates/nav.html"%}
+
+  <div class="wrapper">
+    <div class="one">
+      <h2> CATEGORIES </h2>
+  {%include "/templates/particles.html"%}
+
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search clubs">
 
-  <ul id="categorylist">
-    <li><a href="#">Athletics </a></li>
-    <li><a href="#">Arts</a></li>
-    <li><a href="#"> Academics</a></li>
-    <li><a href="#">Service </a></li>
-    <li><a href="#">Religion</a></li>
-    <li><a href="#"> Culture</a></li>
-    <li><a href="#">Greek Life</a></li>
-    <li><a href="#"> Volunteer</a></li>
-    <li><a href="#">Housing</a></li>
-    <li><a href="#">Other</a></li>
+    <ul id="categorylist">
+      <li><a href="#">Athletics </a></li>
+      <li><a href="#">Arts</a></li>
+      <li><a href="#"> Academics</a></li>
+      <li><a href="#">Service </a></li>
+      <li><a href="#">Religion</a></li>
+      <li><a href="#"> Culture</a></li>
+      <li><a href="#">Greek Life</a></li>
+      <li><a href="#"> Volunteer</a></li>
+      <li><a href="#">Housing</a></li>
+      <li><a href="#">Other</a></li>
   </ul>
+  </div>
 
+  <div class="two">
   {% for event in event_block %}
       <h2>{{event.name}} | {{event. name}}s</h2>
   {% endfor %}
+<<<<<<< HEAD
+=======
+  </div>
+>>>>>>> 201738ef6a0b97283ae9374b755fd99787cee0c8
 
   <script>
   function myFunction() {
@@ -45,6 +59,7 @@
   </script>
 
 <div class="foo">
+      <h2>EVENTS</h2>
   <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
   <a href="http://localhost:8080/events"
    style="display: none;" class="cta gmail-show">Save the date</a>
@@ -66,5 +81,8 @@
 </div>
 
 <script src="/scripts/eventful.js"></script>
+
+<footer> links </footer>
+</div>
 </body>
 </html>

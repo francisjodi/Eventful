@@ -28,6 +28,11 @@ def createEvent(name,location,org,category,college,date):
 
         event.put()
 
+class particleHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('/templates/particles.html')
+        self.response.write(template.render())
+
 class SigninHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -140,6 +145,7 @@ class LoadDataHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
+    ('/particles', particleHandler),
     ('/', SigninHandler),
     ('/search', SearchHandler),
     ('/calendar', CalendarHandler),
