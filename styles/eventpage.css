@@ -43,6 +43,7 @@ display:block!important;
   margin-left: 25%;
   background-color: white;
   border-color: white;
+  padding: 5px;
 
 }
 
@@ -57,7 +58,8 @@ display:block!important;
   max-width: inherit;
   overflow: auto;
   background-color: white;
-  border-color: white
+  border-color: white;
+  paddign 5px;
 
 
 }
