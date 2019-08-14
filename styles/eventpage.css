@@ -1,7 +1,22 @@
-
-
 u ~ div .gmail-show {
 display:block!important;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 50px;
+  letter-spacing: 4px;
+  margin-bottom: 3%;
+  margin-top: 5%;
+}
+
+.eventpage_layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: 5% 90% 5%;
+  grid-gap: 3px;
+  overflow: auto;
 }
 
 .wrapper{

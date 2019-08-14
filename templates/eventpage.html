@@ -4,65 +4,59 @@
     <meta charset="UTF-8">
     <title>Eventful | Events</title>
     <link rel="stylesheet" href="/styles/eventpage.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300&display=swap" rel="stylesheet">
+
 </head>
 <body>
   {%include "/templates/nav.html"%}
-
-  <div class="wrapper">
-    <div class="one">
-      <h2 id="categories"> CATEGORIES </h2>
-
-
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search clubs">
-
-    <ul id="categorylist">
-      <li><a href="#">Athletics </a></li>
-      <li><a href="#">Arts</a></li>
-      <li><a href="#"> Academics</a></li>
-      <li><a href="#">Service </a></li>
-      <li><a href="#">Religion</a></li>
-      <li><a href="#"> Culture</a></li>
-      <li><a href="#">Greek Life</a></li>
-      <li><a href="#"> Volunteer</a></li>
-      <li><a href="#">Housing</a></li>
-      <li><a href="#">Health & Welness</a></li>
-      <li><a href="#">Recreation & Leisure </a></li>
-      <li><a href="#">Other</a></li>
-
-  </ul>
+  <div class = "eventpage_layout">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search clubs">
+    <div>
+      <ul id="categorylist">
+        <li><a href="#">Athletics </a></li>
+        <li><a href="#">Arts</a></li>
+        <li><a href="#"> Academics</a></li>
+        <li><a href="#">Service </a></li>
+        <li><a href="#">Religion</a></li>
+        <li><a href="#"> Culture</a></li>
+        <li><a href="#">Greek Life</a></li>
+        <li><a href="#"> Volunteer</a></li>
+        <li><a href="#">Housing</a></li>
+        <li><a href="#">Health & Welness</a></li>
+        <li><a href="#">Recreation & Leisure </a></li>
+        <li><a href="#">Other</a></li>
+      </ul>
+    </div>
   </div>
+  
 
-  <div class="two">
-  {% for event in event_block %}
-      <h2>{{event.name}} | {{event. name}}s</h2>
-  {% endfor %}
+    
+      {% for event in event_block %}
+          <h2>{{event.name}} | {{event. name}}s</h2>
+      {% endfor %}
 
-<!-- <div class="foo"> -->
-      <h2 id="events">EVENTS</h2>
+    <!-- <div class="foo"> -->
+          <h2 id="events">EVENTS</h2>
 
-<div>
-  <ul>
-    {% for event in events %}
-    <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
-    <a href="http://localhost:8080/events"
-     style="display: none;" class="cta gmail-show">Save the date</a>
-    <li>
+   
+      <ul>
+        {% for event in events %}
+        <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
+        <a href="http://localhost:8080/events"
+        style="display: none;" class="cta gmail-show">Save the date</a>
+        <li>
 
-      {{event.event_name}} on {{event.date_and_time}}
-      <br>&nbsp &nbsp Time: {{event.time}}
-      <br>&nbsp &nbsp Location: {{event.location}}
-      <br>&nbsp &nbsp Put on by: {{event.organization_name}}
-      <br> . . .
-      <p><br> </p>
-    </li>
-    {% endfor %}
-  </ul>
-  </div>
-</div>
-</div>
+          {{event.event_name}} on {{event.date_and_time}}
+          <br>&nbsp &nbsp Time: {{event.time}}
+          <br>&nbsp &nbsp Location: {{event.location}}
+          <br>&nbsp &nbsp Put on by: {{event.organization_name}}
+          <br> . . .
+          <p><br> </p>
+        </li>
+        {% endfor %}
+      </ul>
 
 <script src="/scripts/eventful.js"></script>
 <footer> links </footer>
-</div>
 </body>
 </html>
