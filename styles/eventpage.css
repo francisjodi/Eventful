@@ -37,6 +37,7 @@ max-width: inherit;
 .foo{
   grid-column: 2/2;
   grid-row: 2/3;
+  align: left;
 }
 
 h2{
@@ -58,7 +59,7 @@ ul {
 
 footer{
   position:fixed;
-  margin-top: 600px;
+  margin-top: auto;
   grid-row: 3/3;
   margin-left: 25%;
   margin-right: 25%;
