@@ -36,7 +36,7 @@ max-width: inherit;
 
 .foo{
   grid-column: 2/2;
-  grid-row: 2/2;
+  grid-row: 2/3;
 }
 
 h2{
@@ -46,18 +46,28 @@ h2{
   font-size: 35px;
 }
 
-
+li{
+  font-family: sans-serif;
+  text-align: justify;
 }
+
+
+ul {
+  list-style-type: none;
+ }
+
 footer{
+  position:fixed;
+  margin-top: 600px;
   grid-row: 3/3;
-  position: absolute;
-  bottom: 0;
   margin-left: 25%;
   margin-right: 25%;
   height: auto;
   border-width: thin;
   border-style: solid;
+  background-color: #dbdbdb;
 }
+
 
 body{
   background-color: #f0f0f0;
