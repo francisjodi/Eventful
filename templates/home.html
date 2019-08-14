@@ -5,7 +5,7 @@
     <title>HOME</title>
 </head>
 <body>
-<form method="POST" >
+<form method="POST" action="/events" >
     <select name="college_name" id="collegechoice">
         <option value="Loyola Marymount University" class="college">Loyola Marymount University</option>
         <option value="University of California Los Angeles" class="college">University of California Los Angeles</option>
@@ -14,18 +14,8 @@
       </select>
     <p><input id="searchbtn" type = "submit" value = "Search"></p>
     {%include "/templates/nav.html"%}
+    {%include "/templates/particles.html"%}
 </form>
 <script src="/scripts/eventful.js"></script>
-
-    {%include "/templates/nav.html"%}
-    <select>
-        <option value="Loyola Marymount University">Loyola Marymount University</option>
-        <option value="University of California Los Angeles">University of California Los Angeles</option>
-        <option value="University of Southern California">University of Southern California</option>
-        <option value="Pepperdine University">Pepperdine University</option>
-      </select>
-    <p><input type = "submit" value = "Search"></p>
-
-    {%include "/templates/particles.html"%}
 </body>
 </html>
