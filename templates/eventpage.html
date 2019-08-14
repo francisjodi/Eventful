@@ -10,7 +10,8 @@
 
   <div class="wrapper">
     <div class="one">
-      <h2> CATEGORIES </h2>
+      <h2 id="categories"> CATEGORIES </h2>
+
 
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search clubs">
 
@@ -35,10 +36,12 @@
   {% for event in event_block %}
       <h2>{{event.name}} | {{event. name}}s</h2>
   {% endfor %}
-  </div>
+
+<!-- <div class="foo"> -->
+      <h2 id="events">EVENTS</h2>
+
 
 <div class="foo">
-      <h2>EVENTS</h2>
   <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
   <a href="http://localhost:8080/events"
    style="display: none;" class="cta gmail-show">Save the date</a>
@@ -57,6 +60,7 @@
     {% endfor %}
   </ul>
   </div>
+</div>
 </div>
 
 <script src="/scripts/eventful.js"></script>
