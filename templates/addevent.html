@@ -19,7 +19,7 @@
         <p class = "title">Add event</p>
 
 
-        <div>
+        <div class = "input_box">
           <select name="college_name">
             <option>Loyola Marymount University</option>
             <option>University of California Los Angeles</option>
@@ -28,35 +28,34 @@
           </select>
         </div>
 
+        <div class = "input_box">
+            <select name = "category">
+              <option>Athletics</option>
+              <option>Arts</option>
+              <option>Academics</option>
+              <option>Religion</option>
+              <option>Service</option>
+              <option>Greek Life</option>
+              <option>Culture</option>
+              <option>Volunteer</option>
+              <option>Housing</option>
+              <option>Other</option>
+            </select>
+          </div>
 
-        <div><input name = "organization_name"></div>
 
+        <div class = "input_box"><input name = "organization_name" placeholder="Organization"></div>
 
-        <div>
-          <select name = "category">
-            <option>Athletics</option>
-            <option>Arts</option>
-            <option>Academics</option>
-            <option>Religion</option>
-            <option>Service</option>
-            <option>Greek Life</option>
-            <option>Culture</option>
-            <option>Volunteer</option>
-            <option>Housing</option>
-            <option>Other</option>
-          </select>
-        </div>
+        <div class = "input_box"><input name = "event_name" placeholder="Event"></div>
 
-        <div><input name = "event_name"></div>
+        <div class = "input_box"><input name = "location" placeholder="Location"></div>
 
-        <div><input name = "location"></div>
+        <div class = "input_box"><input name="date" type=date ></div>
 
-        <div><input name="date" type=date></div>
-
-        <div><input name="time" type=time></div>
+        <div class = "input_box"><input name="time" type=time></div>
 
         <!-- <div>Details<input name = "additional_info"></div> -->
-        <p><input type = "submit" value = "Add"></p>
+        <p><input type = "submit" value = "Submit" id = "authorize_button"></p>
 
       </form>
     </section>
