@@ -46,6 +46,10 @@ h2{
   font-size: 35px;
 }
 
+li{
+  font-family: sans-serif;
+  text-align: justify;
+}
 
 }
 footer{
