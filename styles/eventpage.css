@@ -48,17 +48,14 @@ display:block!important;
   border: 2px solid red; */
 }
 
-<<<<<<< HEAD
 /* .foo{
   align: left;
 } */
-=======
 .foo{
   grid-column: 2/2;
   grid-row: 2/3;
   text-align: left;
 }
->>>>>>> 840f39e167439492e56f0736ccc6ec58c4f3cdab
 
 h2{
   font-weight: bold;
