@@ -37,15 +37,18 @@ class SigninHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         template = jinja_env.get_template('/templates/signin.html')
+
         if user:
             logout_url = users.create_logout_url('/')
             self.response.write(template.render({
-                "loginURL":logout_url
+                "greeting": 'Log Out',
+                "url": logout_url,
             }))
         else:
-            login_URL = users.create_login_url('/')
+            login_URL = users.create_login_url('/search')
             self.response.write(template.render({
-                "loginURL":login_URL
+                'greeting': 'Log In',
+                "url": login_URL,
             }))
 
     def post(self):

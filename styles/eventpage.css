@@ -26,6 +26,7 @@ display:block!important;
   grid-template-rows: 5% 90% 5%;
   grid-gap: 3px;
   overflow: auto;
+  border-color: white;
 }
 
 #events{
@@ -55,6 +56,9 @@ display:block!important;
   border-spacing: inherit;
   height:auto;
   margin-left: 25%;
+  background-color: white;
+  border-color: white;
+  padding: 5px;
 
 }
 
@@ -68,6 +72,10 @@ display:block!important;
   margin-right: 25%;
   max-width: inherit;
   overflow: auto;
+  background-color: white;
+  border-color: white;
+  paddign 5px;
+
 
 }
 
@@ -97,8 +105,9 @@ footer{
   height: auto;
   border: 2px solid black;
   border-width: thin;
-  background-color: #dbdbdb;
+  background-color: rgb(156, 176, 207);
   text-align: center;
+  border-color:rgb(156, 176, 207)
 }
 
 
