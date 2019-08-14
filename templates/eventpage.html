@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/styles/eventpage.css">
 </head>
 <body>
-  
+
   {%include "/templates/nav.html"%}
 
   <div class="wrapper">
@@ -34,10 +34,7 @@
   {% for event in event_block %}
       <h2>{{event.name}} | {{event. name}}s</h2>
   {% endfor %}
-<<<<<<< HEAD
-=======
   </div>
->>>>>>> 201738ef6a0b97283ae9374b755fd99787cee0c8
 
   <script>
   function myFunction() {
@@ -63,7 +60,7 @@
   <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
   <a href="http://localhost:8080/events"
    style="display: none;" class="cta gmail-show">Save the date</a>
-</div>
+
 
 
 <div>
@@ -78,6 +75,7 @@
     </li>
     {% endfor %}
   </ul>
+  </div>
 </div>
 
 <script src="/scripts/eventful.js"></script>

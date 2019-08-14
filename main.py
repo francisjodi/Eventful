@@ -83,14 +83,7 @@ class SearchHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('/templates/home.html')
         self.response.write(template.render())
-    def post(self):
-        college_name = self.request.get("college_name")
-        events = Event.query().filter(Event.college_name==college_name).fetch()
-        template = jinja_env.get_template('/templates/eventpage.html')
-        if events:
-            self.response.write(template.render({'events':events}))
-        else:
-            self.response.write(template.render())
+
 
 class EventPageHandler(webapp2.RequestHandler):
     def get(self):
@@ -101,6 +94,14 @@ class EventPageHandler(webapp2.RequestHandler):
             events = Event.query().fetch()
         template = jinja_env.get_template('/templates/eventpage.html')
         self.response.write(template.render({'events' : events}))
+    def post(self):
+        college_name = self.request.get("college_name")
+        events = Event.query().filter(Event.college_name==college_name).fetch()
+        template = jinja_env.get_template('/templates/eventpage.html')
+        if events:
+            self.response.write(template.render({'events':events}))
+        else:
+            self.response.write(template.render())
 
 
 class AddEventHandler(webapp2.RequestHandler):
