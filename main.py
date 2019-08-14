@@ -139,7 +139,7 @@ class AddEventHandler(webapp2.RequestHandler):
         #     category.events.append(event_key)
         # category.put()
 
-        self.response.write("Your event: {} has been added, thank you.".format(event_name))
+        self.response.write("<html><p>Your event: {} has been added, thank you.</p><a href='/addevent'>Back</a></html>".format(event_name))
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
