@@ -34,8 +34,13 @@ document.querySelectorAll("#categorylist li").forEach(element=>{
     window.location.href = url;
   })
 })
+//
+// document.querySelector("#backbtn").addEventListener("click", event=>{
+//   const url = `/addevent`;
+//   window.location.href = url;
+// })
 
-document.querySelector("#backbtn").addEventListener("click", event=>{
-  const url = `/addevent`;
-  window.location.href = url;
-})
+// document.querySelector("#authorize_button").addEventListener("click", event=>{
+  // const url = `/search`;
+  // window.location.href = url;
+// })

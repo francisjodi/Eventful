@@ -14,14 +14,17 @@
     <p class = "header">welcome to</p>
     <p class = "title">eventful</p>
     <p class = "subtitle">no.mo.fomo</p>
-    
+
     <!--Add buttons to initiate auth sequence and sign out-->
     <button  href = "/template/home.html" id="authorize_button" style="display: none;">Log in</button>
-    <button id="signout_button" style="display: none;">Log out</button>
+
+    <a href="{{url}}"> {{greeting}} </a>
+    {{ Proceed }}
     </div>
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
+      console.log('---')
       var CLIENT_ID = '325426998430-n94mad8fsuv1re7su2o1bj8jeequils0.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyAjSf2akLhpV1nyAPTVup-1xjiP-RCBoKc';
 
@@ -34,6 +37,7 @@
 
       var authorizeButton = document.getElementById('authorize_button');
       var signoutButton = document.getElementById('signout_button');
+
 
       /**
        *  On load, called to load the auth2 library and API client library.
@@ -71,6 +75,7 @@
        */
       function updateSigninStatus(isSignedIn) {
         if (isSignedIn) {
+          console.log('test');
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
           listUpcomingEvents();
@@ -85,6 +90,7 @@
        */
       function handleAuthClick(event) {
         gapi.auth2.getAuthInstance().signIn();
+        console.log('WHEN')
       }
 
       /**
@@ -144,5 +150,6 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
+    <script src="/scripts/eventful.js"></script>
   </body>
 </html>
