@@ -24,7 +24,7 @@
   {% for event in event_block %}
       <h2>{{event.name}} | {{event. name}}s</h2>
   {% endfor %}
-      
+
   <script>
   function myFunction() {
       var input, filter, ul, li, a, i, txtValue;
@@ -59,6 +59,7 @@
       <br>location: {{event.location}}
       <br>put on by: {{event.organization_name}}
       <br>time: {{event.time}}
+      <br>{{event.college_name}}
     </li>
     {% endfor %}
   </ul>
