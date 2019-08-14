@@ -5,33 +5,40 @@
     <title>Eventful | Add Event</title>
     <link rel="stylesheet" href="styles/addevent.css">
     <link href="https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap" rel="stylesheet">
-
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300&display=swap" rel="stylesheet">
+    
+    
+    
+    
   <body>
     {%include "/templates/nav.html"%}
     <div class = "addevent_center">
-
+      
       <form method="post" action="/addevent" class = "form" id = "formtext">
+        <p class = "title">Add event</p>
         <div>College
-        <select name="college_name">
-          <option>Loyola Marymount University</option>
-          <option>University of California Los Angeles</option>
-          <option>Pepperdine University</option>
-          <option>University of Southern California</option>
-        </select></div>
+          <select name="college_name">
+            <option>Loyola Marymount University</option>
+            <option>University of California Los Angeles</option>
+            <option>Pepperdine University</option>
+            <option>University of Southern California</option>
+          </select>
+        </div>
         <div>Organization<input name = "organization_name"></div>
-        <div>Category<select name = "category">
-          <option>Athletics</option>
-          <option>Arts</option>
-          <option>Academics</option>
-          <option>Religion</option>
-          <option>Service</option>
-          <option>Greek Life</option>
-          <option>Culture</option>
-          <option>Volunteer</option>
-          <option>Housing</option>
-          <option>Other</option>
-        </select></div>
+        <div>Category
+          <select name = "category">
+            <option>Athletics</option>
+            <option>Arts</option>
+            <option>Academics</option>
+            <option>Religion</option>
+            <option>Service</option>
+            <option>Greek Life</option>
+            <option>Culture</option>
+            <option>Volunteer</option>
+            <option>Housing</option>
+            <option>Other</option>
+          </select>
+        </div>
         <div>Title<input name = "event_name"></div>
         <div>Location<input name = "location"></div>
         <div>Date<input name="date" type=date></div>
