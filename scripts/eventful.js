@@ -20,7 +20,7 @@
 //     console.log(url);
 //   })
 // })
-// 
+//
 // document.querySelector("#searchbtn").addEventListener("onmouseenter", event=>{
 //   // window.location.href = url;
 //   let choice = document.querySelector("#collegechoice").value;
