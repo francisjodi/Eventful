@@ -1,0 +1,19 @@
+.nav_position {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    left: 25%;   
+}
+
+.nav_text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background-color: rgb(156, 176, 207);
+    width: 100%;
+
+}
