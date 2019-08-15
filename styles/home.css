@@ -29,11 +29,38 @@ p#search-button{
   background-color: rgb(0,0,0);
   color: white;
   border:none;
-  width: 150px;
+  width: 90px;
   padding: 10px;
   border-radius: 25px;
   opacity: 0.7;
   transition: 0.3s;
   display: block;
+}
+
+
+#searchbtn{
+  font-size: 15px;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 1px;
+  background-color: rgb(0,0,0);
+  color: white;
+  border:none;
+  width:90px;
+  padding: 10px;
+  border-radius: 25px;
+  opacity: 0.7;
+  transition: 0.3s;
+  display: block;
+  top:180px;
+  
+}
+
+body{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  display:flow-root;
+
 
 }
