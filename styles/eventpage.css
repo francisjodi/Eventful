@@ -17,6 +17,7 @@ ul {
   font-size: 14px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .categorylist {
@@ -27,6 +28,7 @@ ul {
   align-items: flex-start;
   flex-direction: column;
   background-color: white;
+  text-indent: 100px;
   width: 95%;
   margin-top: 12px;
 }
@@ -43,7 +45,7 @@ ul {
   font-family: 'Barlow', 'sans-serif';
   font-size: 40px;
   margin-top: 12px;
-  
+
 }
 
 .footer {
