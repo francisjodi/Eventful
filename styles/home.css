@@ -83,6 +83,7 @@ p.statement{
   grid-column-start: 1;
   position: relative;
   top: 800px;
+  height: 20px
 }
 
 .name {
@@ -127,10 +128,12 @@ p.statement{
   grid-column: 2;
   position: relative;
   top: 800px;
+  height: 20px;
 }
 
 #Warren {
   grid-column: 3;
   position: relative;
   top: 800px;
+  height: 20px;
 }
