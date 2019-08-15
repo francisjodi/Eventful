@@ -11,13 +11,14 @@ body {
 }
 
 ul {
+  padding: 0px;
   list-style-type: none;
   font-family: 'arial';
   letter-spacing: 2px;
   font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
+  /* display: flex;
+  flex-direction: column; */
+  /* overflow: auto; */
 }
 
 .categorylist {
@@ -28,9 +29,9 @@ ul {
   align-items: flex-start;
   flex-direction: column;
   background-color: white;
-  text-indent: 100px;
-  width: 95%;
-  margin-top: 12px;
+  text-indent: 300px;
+  width: 90%;
+  margin-top: 16px;
 }
 
 .events {
@@ -40,12 +41,9 @@ ul {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  background-color: white;
-  /* text-indent: 30px; */
   font-family: 'Barlow', 'sans-serif';
   font-size: 40px;
-  margin-top: 12px;
-
+  margin-top: 16px;
 }
 
 .footer {
@@ -54,13 +52,23 @@ ul {
   grid-column: 3;
 }
 
-#event_detail {
-  margin-left: 40px;
+.event_detail {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+.save_event {
+  font-family: 'Rubik', sans-serif;
+  margin-top:4%;
+  margin-bottom: 10%;
+  padding-bottom: 20px;
 }
 
 #myInput {
   margin-top: 10%;
   margin-left: 30px;
+  padding-bottom: -30px;
   width: 75%;
   height: 3%;
   font-size: 16px;
@@ -70,6 +78,7 @@ ul {
 #myUL{
   padding-top: 30px;
   text-indent: -30px;
+  margin-top: -5px;
 }
 
 

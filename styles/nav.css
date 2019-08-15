@@ -24,7 +24,7 @@
     
 }
 
-a {
+#nav_icon {
     margin: 25px;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -32,7 +32,7 @@ a {
     padding-right: 10px;
     transition: 0.2s;
 }
-a:hover{background-color: rgb(136, 156, 187)}
+#nav_icon:hover{background-color: rgb(136, 156, 187)}
 
 
 

@@ -6,6 +6,7 @@
     <title>Eventful | Events</title>
     <link rel="stylesheet" href="/styles/eventpage.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 
 </head>
 
@@ -30,20 +31,17 @@
   </div>
 
   <div class = "events">
-    {% for event in event_block %}
-    <h>{{event.name}} | {{event.name}}s</h>
-    {% endfor %}
     <ul>
       {% for event in events %}
-      <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
-      <a href="http://localhost:8080/events" style="display:none;" class="cta gmail-show">Save the date</a>
       <li class = "event_detail">
         {{event.event_name}} on {{event.date_and_time}}
         <br>&nbsp &nbsp Time: {{event.time}}
         <br>&nbsp &nbsp Location: {{event.location}}
-        <br>&nbsp &nbsp Put on by: {{event.organization_name}}
-        <br> . . .
-        <p><br> </p>
+        <br>&nbsp &nbsp Organization: {{event.organization_name}}
+        <div class = "save_event">
+          <a href="https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
+          <a href="http://localhost:8080/events" style="display:none;" class="cta gmail-show">Save the date</a>
+        </div>
       </li>
       {% endfor %}
     </ul>
