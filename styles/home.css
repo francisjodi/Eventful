@@ -8,6 +8,7 @@
   position: relative;
   z-index: 1;
   top: 280px;
+  font-size: 32px;
 }
 
 p.statement{
@@ -22,7 +23,12 @@ p.statement{
 }
 
 
-p#search-button{
+#search-button{
+  /* text-align: left;
+  position: relative;
+  z-index: 1;
+  top: 350px;
+  left: 48%; */
   font-size: 20px;
   font-family: 'Rubik', sans-serif;
   letter-spacing: 1px;
@@ -52,10 +58,10 @@ p#search-button{
   transition: 0.3s;
   display: block;
   top:180px;
-  
+
 }
 
-body{
+/* body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -63,4 +69,4 @@ body{
   display:flow-root;
 
 
-}
+} */
