@@ -34,6 +34,21 @@ document.querySelectorAll("#categorylist li").forEach(element=>{
     window.location.href = url;
   })
 })
+
+document.querySelector("#jodilinkedin").addEventListener("click", event=>{
+  const url =  `https://www.linkedin.com/in/jodi-ann-francis-241a41185/`;
+  window.location.href = url;
+})
+
+document.querySelector("#heidilinkedin").addEventListener("click", event=>{
+  const url =  `https://www.linkedin.com/in/heidi-johnson-66997a190/`;
+  window.location.href = url;
+})
+
+document.querySelector("#warrenlinkedin").addEventListener("click", event=>{
+  const url =  `https://www.linkedin.com/in/warren-lee-75055b15a/`;
+  window.location.href = url;
+})
 //
 // document.querySelector("#backbtn").addEventListener("click", event=>{
 //   const url = `/addevent`;
