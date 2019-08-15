@@ -7,10 +7,10 @@
     position: relative;
     z-index: 1;
     top: 280px;
-    left: 15%;   
+    left: 15%;
 }
 
-.header { 
+.header {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 26px;
@@ -64,5 +64,5 @@
     opacity: 0.7;
     transition: 0.3s;
   }
-  
+
 #authorize_button:hover {opacity: 1}
