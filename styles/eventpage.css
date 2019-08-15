@@ -12,7 +12,6 @@ body {
 
 ul {
   list-style-type: none;
-  color: red;
   font-family: 'arial';
   letter-spacing: 2px;
   font-size: 14px;
@@ -25,7 +24,7 @@ li {
   text-indent: -40px;
 }
 
-.categories {
+.categorylist {
   grid-row:2;
   grid-column: 2;
   display: flex;
@@ -33,18 +32,26 @@ li {
   align-items: flex-start;
   flex-direction: column;
   background-color: white;
-  margin-top: 10%;
   text-indent: 100px;
-  width: 90%;
+
+  width: 95%;
+  margin-top: 12px;
 }
 
 .events {
   grid-row:2;
   grid-column: 3;
   display: flex;
-  margin-top: 5%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
   background-color: white;
-  padding-top: 40px;
+  text-indent: 30px;
+  font-family: 'Barlow', 'sans-serif';
+  font-size: 40px;
+
+  margin-top: 12px;
+  
 }
 
 .footer {
@@ -53,7 +60,9 @@ li {
   grid-column: 3;
 }
 
-#searchbar {
+
+
+#myInput {
   margin-top: 10%;
   margin-left: 30px;
   width: 75%;

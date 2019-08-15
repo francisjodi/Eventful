@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,60 +11,35 @@
 
 <body>
   {%include "/templates/nav.html"%}
-  <div class = "categories">
-    <input type="text" id = "searchbar" onkeyup="myFunction()" placeholder="Search clubs">
-    <div>
-      <ul>
-        <li><a href="/events">Athletics </a></li>
-        <li><a href="/events">Arts</a></li>
+  <div class = "categorylist">
+    <input type="text" id = "myInput" onkeyup= "myFunction()" placeholder= "Search clubs">
+    <div id = "li">
+      <ul id = "myUL">
         <li><a href="/events">Academics</a></li>
-        <li><a href="/events">Service </a></li>
-        <li><a href="/events">Religion</a></li>
+        <li><a href="/events">Arts</a></li>
+        <li><a href="/events">Athletics </a></li>
         <li><a href="/events">Culture</a></li>
         <li><a href="/events">Greek Life</a></li>
-        <li><a href="/events">Volunteer</a></li>
-        <li><a href="/events">Housing</a></li>
         <li><a href="/events">Health</a></li>
+        <li><a href="/events">Housing</a></li>
         <li><a href="/events">Recreation</a></li>
+        <li><a href="/events">Religion</a></li>
+        <li><a href="/events">Service </a></li>
+        <li><a href="/events">Volunteer</a></li>
         <li><a href="/events">Other</a></li>
       </ul>
     </div>
-    <script>
-function myFunction() {
-  // Declare variables
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myInput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-</script>
   </div>
 
   <div class = "events">
     {% for event in event_block %}
-    <h2>{{event.name}} | {{event. name}}s</h2>
+    <h>{{event.name}} | {{event.name}}s</h>
     {% endfor %}
-
-    <h2>EVENTS</h2>
     <ul>
       {% for event in events %}
       <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
-      <a href="http://localhost:8080/events"
-      style="display: none;" class="cta gmail-show">Save the date</a>
+      <a href="http://localhost:8080/events" style="display:none;" class="cta gmail-show">Save the date</a>
       <li>
-
         {{event.event_name}} on {{event.date_and_time}}
         <br>&nbsp &nbsp Time: {{event.time}}
         <br>&nbsp &nbsp Location: {{event.location}}
@@ -74,10 +50,9 @@ function myFunction() {
       {% endfor %}
     </ul>
   </div>
-  
 
 
-
+  <div >
     <script>
       function myFunction() {
         // Declare variables
@@ -86,7 +61,7 @@ function myFunction() {
         filter = input.value.toUpperCase();
         ul = document.getElementById("categorylist");
         li = ul.getElementsByTagName('li');
-
+        console.log("Hello world!");
         // Loop through all list items, and hide those who don't match the search query
         for (i = 0; i < li.length; i++) {
           a = li[i].getElementsByTagName("a")[0];
@@ -98,9 +73,11 @@ function myFunction() {
           }
         }
       }
-      </script>
+    </script>
+  </div>
+  
 
   <script src="/scripts/eventful.js"></script>
-  <footer class = "footer"> links </footer>
+  <!-- <footer class = "footer">  </footer> -->
 </body>
 </html>
