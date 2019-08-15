@@ -15,7 +15,7 @@ ul {
   list-style-type: none;
   font-family: 'arial';
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .categorylist {
@@ -39,7 +39,7 @@ ul {
   align-items: flex-start;
   flex-direction: column;
   font-family: 'Barlow', 'sans-serif';
-  font-size: 40px;
+  font-size: 35px;
   margin-top: 16px;
   overflow:auto;
 }
@@ -53,8 +53,10 @@ ul {
 .event_detail {
   background-color: white;
   width: 100%;
-  padding: 10px;
-  padding-right: 75px;
+  padding: 20px;
+  padding-right: 70px;
+  font-size: 20px;
+
 }
 
 .save_event {
