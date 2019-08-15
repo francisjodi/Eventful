@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>Eventful | Home</title>
     <link rel="stylesheet" href="/styles/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
   {%include "/templates/nav.html"%}
     <div class="select">
+        <img id = "group_image" src = "https://image.flaticon.com/icons/svg/1006/1006541.svg" alt = "group" >
         <form method="POST" action="/events" id="form">
             <select name="college_name" id="collegechoice">
                 <option value="Loyola Marymount University" class="college">Loyola Marymount University</option>
@@ -15,10 +20,11 @@
                 <option value="University of Southern California" class="college">University of Southern California</option>
                 <option value="Pepperdine University" class="college">Pepperdine University</option>
             </select>
-            <p class="statement"> Eventful is a platform for college students to upload and view all events on their campus.<br>Join today to get connected.</p>
             <div id="search">
-            <input id="searchbtn" type = "submit" value = "Search" >
-          </div>
+              <input id="searchbtn" type = "submit" value = "Search" >
+            </div>
+            <p class="statement"> Eventful is a platform for college students to upload and view all events on their campus</p>
+            
         </form>
     </div>
       <div id="Jodi">
