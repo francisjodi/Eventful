@@ -48,10 +48,13 @@
     border-radius: 25px;
     opacity: 0.7;
     transition: 0.3s;
+    text-align: center;
 }
-#signout_button:hover {opacity: 1}
 
-#authorize_button {
+#login:hover{opacity:1}
+/* #signout_button:hover {opacity: 1} */
+
+/* #authorize_button {
     font-size: 20px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: 1px;
@@ -65,4 +68,4 @@
     transition: 0.3s;
   }
 
-#authorize_button:hover {opacity: 1}
+#authorize_button:hover {opacity: 1} */
