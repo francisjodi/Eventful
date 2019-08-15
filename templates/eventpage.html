@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  {%include "/templates/nav.html"%}
+  <!-- {%include "/templates/nav.html"%} -->
   <div>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search clubs">
     <div class = "categories">
@@ -30,43 +30,32 @@
     </div>
   </div>
 
-  {% for event in event_block %}
-  <h2>{{event.name}} | {{event. name}}s</h2>
-  {% endfor %}
-
-  <h2>EVENTS</h2>
-  <ul>
-    {% for event in events %}
-    <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
-    <a href="http://localhost:8080/events"
-    style="display: none;" class="cta gmail-show">Save the date</a>
-    <li>
-
-      {{event.event_name}} on {{event.date_and_time}}
-      <br>&nbsp &nbsp Time: {{event.time}}
-      <br>&nbsp &nbsp Location: {{event.location}}
-      <br>&nbsp &nbsp Put on by: {{event.organization_name}}
-      <br> . . .
-      <p><br> </p>
-    </li>
+  <div class = "events">
+    {% for event in event_block %}
+    <h2>{{event.name}} | {{event. name}}s</h2>
     {% endfor %}
-  </ul>
 
+    <h2>EVENTS</h2>
+    <ul>
+      {% for event in events %}
+      <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
+      <a href="http://localhost:8080/events"
+      style="display: none;" class="cta gmail-show">Save the date</a>
+      <li>
 
-
-<<<<<<< HEAD
-=======
-
-          {{event.event_name}} on {{event.date_and_time}}
-          <br>&nbsp &nbsp Time: {{event.time}}
-          <br>&nbsp &nbsp Location: {{event.location}}
-          <br>&nbsp &nbsp Put on by: {{event.organization_name}}
-          <br> . . .
-          <p><br> </p>
-        </li>
-        {% endfor %}
+        {{event.event_name}} on {{event.date_and_time}}
+        <br>&nbsp &nbsp Time: {{event.time}}
+        <br>&nbsp &nbsp Location: {{event.location}}
+        <br>&nbsp &nbsp Put on by: {{event.organization_name}}
+        <br> . . .
+        <p><br> </p>
+      </li>
+      {% endfor %}
       </ul>
->>>>>>> 3639aec18e6fc51f205dd4d4bdf80754cec586f5
+    </div>
+  
+
+
 
     <script>
       function myFunction() {

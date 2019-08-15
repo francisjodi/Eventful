@@ -12,6 +12,12 @@ body {
   grid-column: 2;
 }
 
+.events {
+  display: grid;
+  grid-row:2;
+  grid-column: 3;
+}
+
 
 
 
