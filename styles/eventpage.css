@@ -15,10 +15,7 @@ ul {
   list-style-type: none;
   font-family: 'arial';
   letter-spacing: 2px;
-  font-size: 14px;
-  /* display: flex;
-  flex-direction: column; */
-  /* overflow: auto; */
+  font-size: 15px;
 }
 
 .categorylist {
@@ -42,8 +39,9 @@ ul {
   align-items: flex-start;
   flex-direction: column;
   font-family: 'Barlow', 'sans-serif';
-  font-size: 40px;
+  font-size: 35px;
   margin-top: 16px;
+  overflow:auto;
 }
 
 .footer {
@@ -56,6 +54,12 @@ ul {
   background-color: white;
   width: 100%;
   padding: 20px;
+<<<<<<< HEAD
+=======
+  padding-right: 70px;
+  font-size: 20px;
+
+>>>>>>> 3f2c03a7574824a06a1b825c243b4095f455b4f7
 }
 
 .save_event {
