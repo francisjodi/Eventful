@@ -7,9 +7,10 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow:300&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
   {%include "/templates/nav.html"%}
-  <div class = "eventpage_layout">
+  <div>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search clubs">
     <div>
       <ul id="categorylist">
@@ -28,33 +29,31 @@
       </ul>
     </div>
   </div>
-  
 
-    
-      {% for event in event_block %}
-          <h2>{{event.name}} | {{event. name}}s</h2>
-      {% endfor %}
+  {% for event in event_block %}
+  <h2>{{event.name}} | {{event. name}}s</h2>
+  {% endfor %}
 
-    <!-- <div class="foo"> -->
-          <h2 id="events">EVENTS</h2>
+  <h2 id="events">EVENTS</h2>
+  <ul>
+    {% for event in events %}
+    <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
+    <a href="http://localhost:8080/events"
+    style="display: none;" class="cta gmail-show">Save the date</a>
+    <li>
 
-   
-      <ul>
-        {% for event in events %}
-        <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
-        <a href="http://localhost:8080/events"
-        style="display: none;" class="cta gmail-show">Save the date</a>
-        <li>
+      {{event.event_name}} on {{event.date_and_time}}
+      <br>&nbsp &nbsp Time: {{event.time}}
+      <br>&nbsp &nbsp Location: {{event.location}}
+      <br>&nbsp &nbsp Put on by: {{event.organization_name}}
+      <br> . . .
+      <p><br> </p>
+    </li>
+    {% endfor %}
+  </ul>
 
-          {{event.event_name}} on {{event.date_and_time}}
-          <br>&nbsp &nbsp Time: {{event.time}}
-          <br>&nbsp &nbsp Location: {{event.location}}
-          <br>&nbsp &nbsp Put on by: {{event.organization_name}}
-          <br> . . .
-          <p><br> </p>
-        </li>
-        {% endfor %}
-      </ul>
+
+
 
 <script src="/scripts/eventful.js"></script>
 <footer> links </footer>
