@@ -101,7 +101,7 @@ p.statement{
   margin-top: 10px;
 }
 
-#jodilinkedin:hover{opacity: .7}
+#jodilinkedin:hover{opacity: .8}
 
 #heidilinkedin {
   display: flex;
@@ -111,7 +111,7 @@ p.statement{
   margin-top: 10px;
 }
 
-#heidilinkedin:hover{opacity: .7}
+#heidilinkedin:hover{opacity: .8}
 
 #warrenlinkedin {
   display: flex;
@@ -121,7 +121,7 @@ p.statement{
   margin-top: 10px;
 }
 
-#warrenlinkedin:hover{opacity: .7}
+#warrenlinkedin:hover{opacity: .8}
 
 #Heidi {
   grid-column: 2;
