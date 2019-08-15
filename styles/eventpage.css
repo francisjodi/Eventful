@@ -16,9 +16,6 @@ ul {
   font-family: 'arial';
   letter-spacing: 2px;
   font-size: 14px;
-  /* display: flex;
-  flex-direction: column; */
-  /* overflow: auto; */
 }
 
 .categorylist {
@@ -44,6 +41,7 @@ ul {
   font-family: 'Barlow', 'sans-serif';
   font-size: 40px;
   margin-top: 16px;
+  overflow:auto;
 }
 
 .footer {
@@ -56,6 +54,7 @@ ul {
   background-color: white;
   width: 100%;
   padding: 10px;
+  padding-right: 75px;
 }
 
 .save_event {
