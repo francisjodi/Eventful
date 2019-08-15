@@ -8,6 +8,7 @@ from google.appengine.api import users
 from event_models import Event, Category
 from seed_events import seed_data
 import datetime
+import logging
 
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 
@@ -91,6 +92,7 @@ class SearchHandler(webapp2.RequestHandler):
 class EventPageHandler(webapp2.RequestHandler):
     def get(self):
         category = self.request.get("category")
+        logging.info(category + "********")
         if category:
             events = Event.query().filter(Event.category==category).fetch()
         else:

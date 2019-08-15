@@ -26,7 +26,7 @@ ul {
   grid-column: 2;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   background-color: white;
   text-indent: 300px;
@@ -80,8 +80,6 @@ ul {
   text-indent: -30px;
   margin-top: -5px;
 }
-
-
 
 
 
