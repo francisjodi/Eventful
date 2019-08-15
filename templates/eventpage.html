@@ -13,22 +13,20 @@
   {%include "/templates/nav.html"%}
   <div class = "categorylist">
     <input type="text" id = "myInput" onkeyup= "myFunction()" placeholder= "Search clubs">
-    <div id = "li">
       <ul id = "myUL">
-        <li><a href="/events">Academics</a></li>
-        <li><a href="/events">Arts</a></li>
-        <li><a href="/events">Athletics </a></li>
-        <li><a href="/events">Culture</a></li>
-        <li><a href="/events">Greek Life</a></li>
-        <li><a href="/events">Health</a></li>
-        <li><a href="/events">Housing</a></li>
-        <li><a href="/events">Recreation</a></li>
-        <li><a href="/events">Religion</a></li>
-        <li><a href="/events">Service </a></li>
-        <li><a href="/events">Volunteer</a></li>
-        <li><a href="/events">Other</a></li>
+        <li id = "myUL"><a href="/events">Academics</a></li>
+        <li id = "myUL"><a href="/events">Arts</a></li>
+        <li id = "myUL"><a href="/events">Athletics </a></li>
+        <li id = "myUL"><a href="/events">Culture</a></li>
+        <li id = "myUL"><a href="/events">Greek Life</a></li>
+        <li id = "myUL"><a href="/events">Health</a></li>
+        <li id = "myUL"><a href="/events">Housing</a></li>
+        <li id = "myUL"><a href="/events">Recreation</a></li>
+        <li id = "myUL"><a href="/events">Religion</a></li>
+        <li id = "myUL"><a href="/events">Service </a></li>
+        <li id = "myUL"><a href="/events">Volunteer</a></li>
+        <li id = "myUL"><a href="/events">Other</a></li>
       </ul>
-    </div>
   </div>
 
   <div class = "events">
@@ -39,7 +37,7 @@
       {% for event in events %}
       <a href="   https://calendar.google.com/calendar/render " class="cta gmail-hide"> Save the date </a>
       <a href="http://localhost:8080/events" style="display:none;" class="cta gmail-show">Save the date</a>
-      <li>
+      <li class = "event_detail">
         {{event.event_name}} on {{event.date_and_time}}
         <br>&nbsp &nbsp Time: {{event.time}}
         <br>&nbsp &nbsp Location: {{event.location}}
