@@ -7,12 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow:300&display=swap" rel="stylesheet">
 
-
 </head>
 <body>
   {%include "/templates/nav.html"%}
     <div class="select">
         <img id = "group_image" src = "https://image.flaticon.com/icons/svg/1006/1006541.svg" alt = "group" >
+        <!-- <img id = "group_image" src = "https://image.flaticon.com/icons/svg/1006/1006540.svg" alt = "group2" > -->
+
         <form method="POST" action="/events" id="form">
             <select name="college_name" id="collegechoice">
                 <option value="Loyola Marymount University" class="college">Loyola Marymount University</option>
@@ -23,22 +24,27 @@
             <div id="search">
               <input id="searchbtn" type = "submit" value = "Search" >
             </div>
-            <p class="statement"> Eventful is a platform for college students to upload and view all events on their campus</p>
-            
+            <p class="statement">Discover your school   •   Stay involved</p>
+
         </form>
+
+        <div class = "linkedin">
+          <div id="Jodi">
+            <p class="name"></p>
+            <img id="jodilinkedin" src="https://image.flaticon.com/icons/svg/511/511130.svg">
+          </div>
+          <div id="Heidi">
+            <p class="name"></p>
+            <img id="heidilinkedin" src="https://image.flaticon.com/icons/svg/511/511128.svg">
+          </div>
+          <div id="Warren">
+            <p class="name"></p>
+            <img id="warrenlinkedin" src="https://image.flaticon.com/icons/svg/511/511143.svg">
+          </div>
+        </div>
+       
     </div>
-      <div id="Jodi">
-        <p class="name">Jodi-Ann Francis</p>
-        <img id="jodilinkedin" src="http://blogs.nature.com/naturejobs/files/2012/12/LinkedIn-InBug-2CRev.png">
-      </div>
-      <div id="Heidi">
-        <p class="name">Heidi Johnson</p>
-        <img id="heidilinkedin" src="http://blogs.nature.com/naturejobs/files/2012/12/LinkedIn-InBug-2CRev.png">
-      </div>
-      <div id="Warren">
-        <p class="name">Warren Lee</p>
-        <img id="warrenlinkedin" src="http://blogs.nature.com/naturejobs/files/2012/12/LinkedIn-InBug-2CRev.png">
-      </div>
+      
     <script src="/scripts/eventful.js"></script>
 
 </body>
