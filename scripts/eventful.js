@@ -28,9 +28,10 @@
 //   console.log(url);
 // })
 
-document.querySelectorAll("#categorylist li").forEach(element=>{
+document.querySelectorAll(".categorylist li").forEach(element=>{
   element.addEventListener("click", event=>{
     const url = `/events?category=${element.textContent}`;
+    console.log(url);
     window.location.href = url;
   })
 })
