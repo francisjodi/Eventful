@@ -7,19 +7,18 @@
 </head>
 <body>
     {%include "/templates/nav.html"%}
-    <!-- {%include "/templates/particles.html"%} -->
-    <!-- <div class="select"> -->
-      <form method="POST" action="/events" class="select">
-        <select name="college_name" id="collegechoice">
-          <option value="Loyola Marymount University" class="college">Loyola Marymount University</option>
-          <option value="University of California Los Angeles" class="college">University of California Los Angeles</option>
-          <option value="University of Southern California" class="college">University of Southern California</option>
-          <option value="Pepperdine University" class="college">Pepperdine University</option>
-        </select>
-    <!-- </div> -->
-    <p class="statement"> 'eventful' is a platform for college students, in order to upload and view events on campus </p>
-    <p id="search-button"><input id="searchbtn" type = "submit" value = "Search" ></p>
-<script src="/scripts/eventful.js"></script>
-</form>
+    <div class="select">
+        <form method="POST" action="/events" >
+            <select name="college_name" id="collegechoice">
+                <option value="Loyola Marymount University" class="college">Loyola Marymount University</option>
+                <option value="University of California Los Angeles" class="college">University of California Los Angeles</option>
+                <option value="University of Southern California" class="college">University of Southern California</option>
+                <option value="Pepperdine University" class="college">Pepperdine University</option>
+            </select>
+            <p class="statement"> 'eventful' is a platform for college students, in order to upload and view events on campus </p>
+            <p><input id="searchbtn" type = "submit" value = "Search" ></p>
+        </form>
+    </div>
+    <script src="/scripts/eventful.js"></script>
 </body>
 </html>
