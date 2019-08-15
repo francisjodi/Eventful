@@ -22,7 +22,7 @@ ul {
 
 li {
   padding-top: 30px;
-  text-indent: -70px; 
+  text-indent: -40px;
 }
 
 .categories {
@@ -33,17 +33,18 @@ li {
   align-items: flex-start;
   flex-direction: column;
   background-color: white;
-  
-}
-
-.filter {
-  color:red;
+  margin-top: 10%;
+  text-indent: 100px;
+  width: 90%;
 }
 
 .events {
   grid-row:2;
   grid-column: 3;
   display: flex;
+  margin-top: 5%;
+  background-color: white;
+  padding-top: 40px;
 }
 
 .footer {
@@ -54,6 +55,11 @@ li {
 
 #searchbar {
   margin-top: 10%;
+  margin-left: 30px;
+  width: 75%;
+  height: 3%;
+  font-size: 16px;
+  text-align: center;
 }
 
 
